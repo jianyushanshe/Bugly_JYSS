@@ -47,7 +47,7 @@ dependencies {
 ```
 dependencies {
     ……
-  implementation 'com.github.jianyushanshe:HaylionBugly:1.0'
+  implementation 'com.github.jianyushanshe:Bugly_JYSS:1.1'
 }
 ```
 
