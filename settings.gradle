@@ -1,1 +1,1 @@
-include ':app', ':haylionbuglylib'
+include ':app', ':buglylib'
