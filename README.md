@@ -146,13 +146,43 @@ apply from: 'tinker-support.gradle'
 @Override
 public void onCreate() {
     super.onCreate();
-    //初始化bugly
-	//参数1：当前application
-	//参数2：在bugly平台申请的App Id（如何申请，见4小节）
-	//参数3：是否是测试
-	//参数4：App的版本号
-	//参数5：是否需要tinker热修复功能
-    BuglyUtil.init(this, buglyId, true, version, true);
+      //初始化bugly
+//参数1：当前application
+//参数2：在bugly平台申请的App Id
+//参数3：是否是测试
+//参数4：App的版本号
+//参数5：是否需要tinker热修复功能
+//参数6：补丁下载，应用等状态回调
+BuglyUtil.init(this, BuildConfig.buglyId, BuildConfig.LOG_DEBUG, BuildConfig.VERSION_NAME, true, new BuglyUtil.TinkerHotFixPathcListener() {
+    @Override
+    public void onPatchURL(String patchFile) {
+    //补丁下载路径
+    }
+    @Override
+    public void onDownloadProgress(long savedLength, long totalLength) {
+    //补丁下载进度
+    }
+   @Override
+    public void onDownloadSuccess() {
+    //下载成功
+    }
+    @Override
+    public void onDownloadFailure() {
+    //下载失败
+    }
+    @Override
+    public void onApplySuccess() {
+    //应用成功
+    }
+    @Override
+    public void onApplyFailure() {
+    //应用失败
+    }
+    @Override
+    public void onPatchRollback() {
+    //应用失败
+    }
+});
     }
 ```
 
