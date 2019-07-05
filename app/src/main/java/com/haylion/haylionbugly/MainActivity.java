@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         tvVisonName = findViewById(R.id.tv_vison);
         tvVisonName.setText(BuildConfig.VERSION_NAME);
         //tvText.setText("春眠不觉晓,这个有bug");//热修复前
-        tvText.setText("春眠不觉晓，处处闻啼鸟");//热修复后
+        tvText.setText("春眠不觉晓，处处闻啼鸟\n夜来风雨声，花落知多少");//热修复后
         tvText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, Main3Activity.class);
                 startActivity(intent);
             }
         });

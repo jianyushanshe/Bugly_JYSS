@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    android:background="@mipmap/icon_01"
+    tools:context=".Main3Activity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="新增页面，热更新添加" />
+        android:text="新增功能页面" />
 
 </android.support.constraint.ConstraintLayout>

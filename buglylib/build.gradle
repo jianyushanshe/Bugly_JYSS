@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -24,8 +24,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:multidex:1.0.3"
-    implementation 'com.tencent.bugly:crashreport_upgrade:1.4.0'
-    implementation 'com.tencent.tinker:tinker-android-lib:1.9.13.2'
-    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
+    api "com.android.support:multidex:1.0.3"
+    api 'com.tencent.bugly:crashreport_upgrade:1.4.0'
+    api 'com.tencent.tinker:tinker-android-lib:1.9.13.2'
+    api 'com.tencent.bugly:nativecrashreport:3.7.1'
 }
